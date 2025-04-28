@@ -3,11 +3,15 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   content: [
     './index.html',
-    './src/**/*.{ts,tsx,js,jsx}', // Add all your src files here
+    './src/**/*.{ts,tsx,js,jsx}',
   ],
   theme: {
     extend: {
-      // Customizations go here
+      colors: {
+        'dark-blue': '#0D1B2A',
+        'darker-grey': '#121821',  // darker grey-black
+        'teal': '#00B4D8',
+      }
     },
   },
   plugins: [],
