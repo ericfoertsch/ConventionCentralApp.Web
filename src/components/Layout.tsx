@@ -1,5 +1,5 @@
 import React from 'react'
-import AppBar from './AppBar'
+import AppBar from './HeaderBar'
 
 interface LayoutProps {
   children: React.ReactNode
