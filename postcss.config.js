@@ -1,12 +1,10 @@
-// postcss.config.ts
-import tailwindcss from '@tailwindcss/postcss';
-import autoprefixer from 'autoprefixer';
+// postcss.config.js
+const tailwindcss = require('@tailwindcss/postcss');
+const autoprefixer = require('autoprefixer');
 
-const config = {
+module.exports = {
   plugins: [
     tailwindcss(),
     autoprefixer(),
   ],
 };
-
-export default config;

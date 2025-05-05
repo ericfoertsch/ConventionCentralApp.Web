@@ -1,17 +1,17 @@
 // src/App.tsx
-import { BrowserRouter, Routes } from 'react-router-dom'
-import AppBar from './components/HeaderBar'
-import { routes } from './routes/routes'
+import { useRoutes } from 'react-router-dom';
+import AppBar from './components/HeaderBar';
+import { routes } from './routes/routes';  // Import your routes here
 
 export default function App() {
+  const element = useRoutes(routes); // This generates the route elements
+
   return (
-    <BrowserRouter>
-      <main>
-        <div className="min-h-screen flex flex-col">
-          <AppBar />
-          <Routes>{routes}</Routes>
-        </div>
+    <div className="min-h-screen flex flex-col">
+      <AppBar />
+      <main className="flex-1">
+        {element}  {/* Render the routed elements here */}
       </main>
-    </BrowserRouter>
-  )
+    </div>
+  );
 }

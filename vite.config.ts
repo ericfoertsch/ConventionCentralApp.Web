@@ -4,20 +4,28 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  optimizeDeps: {
+    include: [
+      '@radix-ui/react-separator',
+      '@radix-ui/react-navigation-menu',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-tooltip',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-accordion',
+    ],
+  },
   server: {
-    host: true,             
-    port: 5173,             
-    strictPort: true,       
+    host: true,
+    port: 5173,
+    strictPort: true,
     watch: {
-      usePolling: true,     
+      usePolling: true,
     },
   },
 })

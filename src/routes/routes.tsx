@@ -1,23 +1,23 @@
 // src/routes.tsx
-import { Route } from 'react-router-dom'
+import { RouteObject } from 'react-router-dom';
 import Admin from '../pages/Admin';
 import Conventions from '../pages/Conventions';
-import EventPlanner from '../pages/EventPlanner';
 import Reports from '../pages/Reports';
 import Settings from '../pages/Settings';
 import User from '../pages/User';
 import Login from '../pages/Login';
 import Unauthorized from '../pages/Unauthorized';
+import { eventPlannerRoutes } from './event-planner-routes';
 
-export const routes = (
-  <>
-    <Route path="/admin" element={<Admin />} />
-    <Route path="/conventions" element={<Conventions />} />
-    <Route path="/eventplanner" element={<EventPlanner />} />
-    <Route path="/reports" element={<Reports />} />
-    <Route path="/settings" element={<Settings />} />
-    <Route path="/user" element={<User />} />
-    <Route path="/login" element={<Login />} />
-    <Route path="/unauthorized" element={<Unauthorized />} />
-  </>
-)
+export const routes: RouteObject[] = [
+  { path: "/admin", element: <Admin /> },
+  { path: "/conventions", element: <Conventions /> },
+  { path: "/reports", element: <Reports /> },
+  { path: "/settings", element: <Settings /> },
+  { path: "/user", element: <User /> },
+  { path: "/login", element: <Login /> },
+  { path: "/unauthorized", element: <Unauthorized /> },
+
+  // Directly integrate eventPlannerRoutes (spread inside the route array)
+  ...eventPlannerRoutes,
+];
