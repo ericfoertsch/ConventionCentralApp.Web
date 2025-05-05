@@ -50,6 +50,16 @@ export default function HeaderBar() {
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  to="/eventplanner"
+                  className="px-4 py-2 text-gray-700 hover:text-blue-600 transition"
+                >
+                  Event Planner
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 

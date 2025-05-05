@@ -2,6 +2,7 @@
 import { Route } from 'react-router-dom'
 import Admin from '../pages/Admin';
 import Conventions from '../pages/Conventions';
+import EventPlanner from '../pages/EventPlanner';
 import Reports from '../pages/Reports';
 import Settings from '../pages/Settings';
 import User from '../pages/User';
@@ -12,6 +13,7 @@ export const routes = (
   <>
     <Route path="/admin" element={<Admin />} />
     <Route path="/conventions" element={<Conventions />} />
+    <Route path="/eventplanner" element={<EventPlanner />} />
     <Route path="/reports" element={<Reports />} />
     <Route path="/settings" element={<Settings />} />
     <Route path="/user" element={<User />} />
