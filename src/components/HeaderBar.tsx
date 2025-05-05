@@ -1,4 +1,5 @@
 // src/components/HeaderBar.tsx
+import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import {
   NavigationMenu,
@@ -20,25 +21,40 @@ export default function HeaderBar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuLink className="px-4 py-2 text-gray-700 hover:text-blue-600 transition">
-                Home
+              <NavigationMenuLink asChild>
+                <Link
+                  to="/admin"
+                  className="px-4 py-2 text-gray-700 hover:text-blue-600 transition"
+                >
+                  Admin
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="px-4 py-2 text-gray-700 hover:text-blue-600 transition">
-                Events
+              <NavigationMenuLink asChild>
+                <Link
+                  to="/conventions"
+                  className="px-4 py-2 text-gray-700 hover:text-blue-600 transition"
+                >
+                  Conventions
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink className="px-4 py-2 text-gray-700 hover:text-blue-600 transition">
-                About
+              <NavigationMenuLink asChild>
+                <Link
+                  to="/reports"
+                  className="px-4 py-2 text-gray-700 hover:text-blue-600 transition"
+                >
+                  Reports
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
         {/* Call to action */}
-        <Button>Get Started</Button>
+        <Button>Login</Button>
       </div>
     </header>
   );
