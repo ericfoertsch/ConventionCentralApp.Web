@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <AppBar />
-      <main className="flex-1">
+      <main className="flex-1 mt-16">  {/* Add margin-top to avoid overlap */}
         {element}  {/* Render the routed elements here */}
       </main>
     </div>

@@ -1,6 +1,12 @@
 // src/pages/VendorTablePage.tsx
+import VendorTable from '../../components/VendorTable';
+
 const VendorTablePage = () => {
-    return <h1>VendorTablePage Page</h1>;
+    return (
+        <div>
+          <VendorTable />
+        </div>
+      );
   };
   
   export default VendorTablePage;

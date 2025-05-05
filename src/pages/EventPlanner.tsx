@@ -1,12 +1,6 @@
 // src/pages/EventPlanner.tsx
-import VendorTable from '../components/VendorTable';
-
 const EventPlanner = () => {
-  return (
-    <div>
-      <VendorTable />
-    </div>
-  );
+  return <h1>Event Planner Page</h1>;
 };
 
 export default EventPlanner;
