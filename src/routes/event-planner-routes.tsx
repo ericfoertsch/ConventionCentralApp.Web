@@ -1,6 +1,6 @@
 // src/routes/event-planner-routes.tsx
 import { RouteObject } from "react-router-dom";
-import EventPlannerNav from "../components/EventPlannerNav";
+import EventPlannerSidebar from "../components/EventPlannerSidebar";
 import VendorTablePage from "../pages/event-planner/VendorTablePage";
 import RoomsPage from "../pages/event-planner/RoomsPage";
 import SchedulePage from "../pages/event-planner/SchedulePage";
@@ -9,7 +9,7 @@ import SchedulePage from "../pages/event-planner/SchedulePage";
 export const eventPlannerRoutes: RouteObject[] = [
   {
     path: "/eventplanner",
-    element: <EventPlannerNav />,
+    element: <EventPlannerSidebar />,
     children: [
       { index: true, element: <VendorTablePage /> }, // Default route for /eventplanner
       { path: "vendors", element: <VendorTablePage /> },
