@@ -1,5 +1,6 @@
 // src/routes.tsx
 import { RouteObject } from 'react-router-dom';
+import Home from '../pages/Home';
 import Admin from '../pages/Admin';
 import Conventions from '../pages/Conventions';
 import Reports from '../pages/Reports';
@@ -9,6 +10,7 @@ import Login from '../pages/Login';
 import Unauthorized from '../pages/Unauthorized';
 
 export const routes: RouteObject[] = [
+  { path: "/", element: <Home /> },
   { path: "/admin", element: <Admin /> },
   { path: "/conventions", element: <Conventions /> },
   { path: "/reports", element: <Reports /> },
