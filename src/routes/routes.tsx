@@ -7,7 +7,6 @@ import Settings from '../pages/Settings';
 import User from '../pages/User';
 import Login from '../pages/Login';
 import Unauthorized from '../pages/Unauthorized';
-import { eventPlannerRoutes } from './event-planner-routes';
 
 export const routes: RouteObject[] = [
   { path: "/admin", element: <Admin /> },
@@ -16,8 +15,5 @@ export const routes: RouteObject[] = [
   { path: "/settings", element: <Settings /> },
   { path: "/user", element: <User /> },
   { path: "/login", element: <Login /> },
-  { path: "/unauthorized", element: <Unauthorized /> },
-
-  // Directly integrate eventPlannerRoutes (spread inside the route array)
-  ...eventPlannerRoutes,
+  { path: "/unauthorized", element: <Unauthorized /> }
 ];

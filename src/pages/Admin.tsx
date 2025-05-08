@@ -1,12 +1,6 @@
-// src/pages/EventPlanner.tsx
-import SidebarPageLayout from '../components/layouts/SideBarPageLayout';
-import EventPlannerSidebar from '../components/EventPlannerSidebar';
+// src/pages/Admin.tsx
+const Admin = () => {
+  return <h1>Admin Page</h1>;
+};
 
-export default function EventPlanner() {
-  return (
-    <SidebarPageLayout sidebar={<EventPlannerSidebar />}>
-      <h1 className="text-xl font-bold">Admin</h1>
-      <p>Admin content goes here...</p>
-    </SidebarPageLayout>
-  );
-}
+export default Admin;
