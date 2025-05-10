@@ -14,6 +14,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
+      'tailwindcss',
       '@radix-ui/react-separator',
       '@radix-ui/react-navigation-menu',
       '@radix-ui/react-dialog',
