@@ -21,6 +21,7 @@ export default defineConfig({
       '@radix-ui/react-tooltip',
       '@radix-ui/react-slot',
       '@radix-ui/react-accordion',
+      '@radix-ui/react-label'
     ],
   },
   server: {

@@ -3,9 +3,9 @@ import { fetchVendors } from '../api/VendorApi';  // Import the function from ve
 import { Vendor } from '../types/Vendor';      // Import the Vendor type
 
 export const useVendorStore = () => {
-  const [vendors, setVendors] = useState<Vendor[]>([]);  // Initialize the vendors state
-  const [loading, setLoading] = useState<boolean>(false); // To track loading state
-  const [error, setError] = useState<string | null>(null); // To track errors
+  const [vendors, setVendors] = useState<Vendor[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadVendors = async () => {
