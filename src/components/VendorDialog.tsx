@@ -12,26 +12,29 @@ import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { Checkbox } from "../components/ui/checkbox";
 import { Vendor } from "../types/Vendor";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 interface VendorDialogProps {
   vendor: Vendor;
+  children?: ReactNode;
 }
 
-export function VendorDialog({ vendor }: VendorDialogProps) {
+export function VendorDialog({ vendor, children }: VendorDialogProps) {
   const [formData, setFormData] = useState({ ...vendor });
 
-const handleChange = <K extends keyof Vendor>(field: K, value: Vendor[K]) => {
-  setFormData((prev) => ({
-    ...prev,
-    [field]: value,
-  }));
-};
+  const handleChange = <K extends keyof Vendor>(field: K, value: Vendor[K]) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" size="sm">View</Button>
+        {children ?? (
+          <Button variant="outline" size="sm">View</Button>
+        )}
       </DialogTrigger>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
@@ -40,7 +43,7 @@ const handleChange = <K extends keyof Vendor>(field: K, value: Vendor[K]) => {
             View or edit vendor details below.
           </DialogDescription>
         </DialogHeader>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
           <div>
             <Label htmlFor="id_vendor">ID</Label>
