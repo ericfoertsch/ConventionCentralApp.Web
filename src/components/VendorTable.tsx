@@ -8,8 +8,9 @@ import {
     TableHeader,
     TableRow,
   } from "../components/ui/table";
-  import { useVendorStore } from '../stores/VendorStore';  // Import the store hook
-  import { Vendor } from '../types/Vendor';         // Import the Vendor type
+import { useVendorStore } from '../stores/VendorStore';  // Import the store hook
+import { Vendor } from '../types/Vendor';         // Import the Vendor type
+import { VendorDialog } from "./VendorDialog";
   
   const VendorTable: React.FC = () => {
     const { vendors, loading, error } = useVendorStore();  // Destructure the state from the store
@@ -56,6 +57,7 @@ import {
               <TableCell>{vendor.link || 'N/A'}</TableCell>
               <TableCell>{vendor.requests_open === null ? 'N/A' : vendor.requests_open ? 'Open' : 'Closed'}</TableCell>
               <TableCell className="text-right">{new Date(vendor.utc_timestamp).toLocaleString()}</TableCell>
+              <TableCell><VendorDialog vendor={vendor} /></TableCell>
             </TableRow>
           ))}
         </TableBody>
